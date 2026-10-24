@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#171b19" />
+  <title>Owner Schedule | William's Barber Studio</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/admin.css" />
+  <script src="/admin.js" type="module" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="content-width admin-top">
+    <a class="admin-wordmark" href="/">W<span>.</span> <small>WILLIAM'S BARBER STUDIO</small></a>
+    <a class="admin-back" href="/">← BACK TO WEBSITE</a>
+  </div></header>
+  <main class="content-width admin-wrap">
+    <div class="admin-heading">
+      <p class="section-kicker">OWNER ONLY / AVAILABILITY</p>
+      <h1>Your schedule<span>.</span></h1>
+      <p>Choose which days you take clients, adjust your hours, and block off specific dates. Your booking calendar will update automatically after you save.</p>
+    </div>
+    <div class="admin-login" id="admin-login">
+      <label for="owner-key">OWNER ACCESS KEY</label>
+      <div class="admin-login-row">
+        <input type="password" id="owner-key" autocomplete="off" placeholder="Enter your ADMIN_KEY" />
+        <button type="button" class="button button-dark" id="load-schedule">LOAD SCHEDULE <span>↗</span></button>
+      </div>
+      <p class="admin-caption">Set <code>ADMIN_KEY</code> in your private <code>.env</code> file or hosting environment. Never share this key or upload it to GitHub.</p>
+    </div>
+    <form id="schedule-form" hidden>
+      <div class="admin-panel">
+        <div class="admin-section-label"><strong>RECURRING WEEKLY AVAILABILITY</strong><span>YOUR REGULAR HOURS</span></div>
+        <div id="weekly-list"></div>
+        <p class="admin-caption">Uncheck a day to close bookings for that entire day. Start and end times use Pacific Time and 30-minute increments.</p>
+      </div>
+      <div class="admin-panel">
+        <div class="admin-section-label"><strong>DAYS OFF / PERSONAL TIME</strong><span>DATES TO BLOCK</span></div>
+        <label for="blocked-dates" class="admin-label">Blocked dates (YYYY-MM-DD, one per line)</label>
+        <textarea id="blocked-dates" rows="5" placeholder="2026-12-25&#10;2027-01-01"></textarea>
+        <p class="admin-caption">Dates listed here won't appear as bookable, even on days you normally work.</p>
+      </div>
+      <div class="admin-warning"><strong>Important:</strong> Closing a day does not cancel appointments people already booked. Contact those customers directly if you need to change an existing booking.</div>
+      <div class="admin-actions"><button type="submit" class="button button-dark" id="save-schedule">SAVE AVAILABILITY <span>↗</span></button><a href="/#booking" class="admin-preview">PREVIEW BOOKING CALENDAR ↗</a></div>
+    </form>
+    <p class="admin-feedback" id="admin-feedback" role="status" aria-live="polite"></p>
+  </main>
+</body>
+</html>

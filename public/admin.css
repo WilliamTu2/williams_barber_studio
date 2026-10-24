@@ -1,0 +1,27 @@
+.admin-top{min-height:78px;display:flex;justify-content:space-between;align-items:center;gap:22px}
+.admin-wordmark{font-family:var(--display);font-size:28px;font-weight:800;letter-spacing:-.09em}
+.admin-wordmark span,.admin-heading h1 span{color:#9db779}
+.admin-wordmark small{font-family:var(--font);font-size:10px;letter-spacing:.12em;margin-left:15px;vertical-align:middle}
+.admin-back,.admin-preview{font-size:11px;font-weight:800;letter-spacing:.08em}
+.admin-wrap{max-width:940px;padding-block:75px 115px}
+.admin-heading h1{font:700 clamp(48px,7vw,78px)/1 var(--display);letter-spacing:-.08em;margin:12px 0 18px}
+.admin-heading>p:last-child{font-size:15px;line-height:1.8;color:#687568;max-width:610px}
+.admin-login,.admin-panel{background:#fff;padding:32px;margin-top:32px;border:1px solid #e0e4d7}
+.admin-login label,.admin-label{display:block;font-size:11px;font-weight:800;letter-spacing:.1em;margin-bottom:12px}
+.admin-login-row{display:flex;gap:12px}
+.admin-login input{flex:1;min-width:100px;min-height:47px;padding:10px 14px;border:1px solid #c6d0c0}
+.admin-caption{font-size:12px;color:#687568;line-height:1.7;margin-top:16px}
+.admin-section-label{display:flex;justify-content:space-between;gap:15px;margin-bottom:23px;font-size:11px;letter-spacing:.09em}
+.admin-section-label span{color:#80907e;font-size:10px}
+.weekday-row{border-top:1px solid #e3e7df;padding:14px 0;display:grid;grid-template-columns:1fr 130px 130px;align-items:center;gap:16px}
+.weekday-label{display:flex;align-items:center;gap:12px;font-size:14px;font-weight:700}
+.weekday-label input{accent-color:#536a4c;width:18px;height:18px}
+.weekday-row select{width:100%;height:38px;padding:5px 8px;border:1px solid #d6dfd0;background:#f8f9f4}
+.weekday-row select:disabled{opacity:.45}
+#blocked-dates{display:block;width:100%;padding:14px;border:1px solid #cad3c4;line-height:1.7;resize:vertical;min-height:130px}
+.admin-warning{margin:22px 0;padding:19px 22px;background:#e9efdd;font-size:13px;line-height:1.7}
+.admin-actions{display:flex;align-items:center;gap:23px;flex-wrap:wrap;margin-top:26px}
+.admin-feedback{font-size:14px;font-weight:700;color:#365a34;min-height:24px}
+.admin-feedback.error{color:#ad4034}
+code{background:#eef1e7;padding:2px 4px;font-size:12px}
+@media(max-width:600px){.admin-wordmark small{display:none}.admin-wrap{padding-block:35px 70px}.admin-login,.admin-panel{padding:22px}.admin-login-row{flex-direction:column}.weekday-row{grid-template-columns:1fr 1fr;gap:8px}.weekday-label{grid-column:span 2}.admin-section-label span{display:none}}

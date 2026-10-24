@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#171b19" />
+  <meta name="description" content="Book a fresh cut at William's Barber Studio. Choose a service and find a time that works for you." />
+  <title>William's Barber Studio — Book Your Cut</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/app.js" type="module" defer></script>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="header-inner content-width">
+      <a class="brand" href="#top" aria-label="William's Barber Studio home">
+        <span class="brand-mark">W<span class="brand-dot">.</span></span>
+        <span class="brand-name">WILLIAM'S<br/><small>BARBER STUDIO</small></span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#how">How it works</a>
+        <a href="#hours">Hours</a>
+        <a href="https://www.instagram.com/willxwiz/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @willxwiz">Instagram ↗</a>
+      </nav>
+      <a class="header-cta" href="#booking">BOOK AN APPOINTMENT <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="content-width hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> THE WILLIAM EXPERIENCE <span class="eyebrow-index">001 / 003</span></p>
+          <h1 id="hero-title">GOOD CUTS.<br/><span>BETTER</span> DAYS<span class="period">.</span></h1>
+          <p class="hero-description">Your style, your schedule. Book a precision cut with zero back-and-forth, and walk out looking like yourself at your best.</p>
+          <div class="hero-buttons">
+            <a class="button button-dark" href="#booking">FIND YOUR TIME <span>↗</span></a>
+            <a class="text-link" href="#services">EXPLORE SERVICES <span>↓</span></a>
+            <a class="hero-instagram" href="https://www.instagram.com/willxwiz/" target="_blank" rel="noopener noreferrer" aria-label="Open @willxwiz Instagram">INSTAGRAM ↗</a>
+          </div>
+          <div class="hero-caption"><span class="asterisk">✳</span> SHARP DETAILS. EASY BOOKINGS. GOOD ENERGY.</div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <img class="hero-photo" src="/images/will-barber.jpg" alt="" />
+          <div class="visual-grid"></div>
+          <div class="visual-top"><span>WILLIAM'S</span><span>CUTS / 001</span></div>
+          <div class="poster-ring"></div>
+          <div class="poster-ring ring-2"></div>
+          <svg class="scissors" viewBox="0 0 340 370" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <g stroke="#e9dcc5" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M138 203 L253 62 Q261 51 274 47"/>
+              <path d="M192 213 L87 66 Q76 49 66 47"/>
+              <path d="M147 214 L111 261"/>
+              <path d="M185 216 L228 267"/>
+            </g>
+            <circle cx="98" cy="288" r="40" stroke="#e9dcc5" stroke-width="11" />
+            <circle cx="247" cy="296" r="40" stroke="#e9dcc5" stroke-width="11" />
+            <circle cx="165" cy="206" r="10" fill="#c6b488" stroke="#171b19" stroke-width="4" />
+            <path d="M138 202 L253 62" stroke="#a6ad9d" stroke-width="2"/>
+            <path d="M192 212 L87 66" stroke="#a6ad9d" stroke-width="2"/>
+          </svg>
+          <div class="poster-side">CLEAN CUTS ONLY</div>
+          <div class="poster-footer"><strong>EST. 2026</strong><span>PRECISION IS PERSONAL.</span></div>
+          <div class="visual-tag">YOUR NEXT LOOK<br/>STARTS HERE <span>↗</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true"><div>GOOD HAIR, GOOD ENERGY <span>✳</span> A CUT ABOVE THE REST <span>✳</span> TAKE YOUR SEAT <span>✳</span> GOOD HAIR, GOOD ENERGY <span>✳</span> A CUT ABOVE THE REST <span>✳</span></div></div>
+
+    <section class="booking-section content-width" id="booking" aria-labelledby="booking-heading">
+      <div class="section-intro">
+        <div><p class="section-kicker">01 / THE BOOKING</p><h2 id="booking-heading">Make it <em>your</em> time.</h2></div>
+        <p>Pick your cut and the time that works for you. You'll get the details by email when confirmations are configured.</p>
+      </div>
+      <div class="booking-layout">
+        <div class="service-column" id="services">
+          <div class="section-topline"><span>SELECT A SERVICE</span><span>01 — 02</span></div>
+          <div class="service-list" id="service-list" aria-label="Services"><div class="loading-placeholder">Loading services…</div></div>
+          <div class="service-note"><span class="note-symbol">✳</span><div><strong>A LITTLE EXTRA CARE</strong><p>Every service includes a consultation, finishing touches, and the kind of attention that makes a difference.</p></div></div>
+        </div>
+        <aside class="booking-panel" aria-label="Appointment booking form">
+          <div class="panel-heading"><span class="panel-eyebrow">YOUR APPOINTMENT</span><span class="status-pill"><span class="status-dot"></span> ACCEPTING BOOKINGS</span></div>
+          <h3>Save your seat<span>.</span></h3>
+          <div class="selected-service" id="selection-summary"><span>YOUR SERVICE</span><strong>Choose a service</strong></div>
+          <div class="field-heading"><span>01</span><strong>CHOOSE A DAY</strong></div>
+          <div class="date-controls"><button type="button" id="prev-week" class="week-arrow" aria-label="Previous dates">←</button><span id="calendar-range">NEXT AVAILABLE</span><button type="button" id="next-week" class="week-arrow" aria-label="Next dates">→</button></div>
+          <div class="date-strip" id="date-strip" role="group" aria-label="Choose appointment date"></div>
+          <div class="field-heading times-heading"><span>02</span><strong>PICK A TIME</strong><span class="timezone-label">PACIFIC TIME</span></div>
+          <div id="time-grid" class="time-grid" role="group" aria-label="Choose appointment time"><span class="muted-message">Choose a date to view times.</span></div>
+          <div class="field-heading details-heading"><span>03</span><strong>YOUR DETAILS</strong></div>
+          <form id="booking-form" novalidate>
+            <div class="field-row"><label for="name">FULL NAME <span aria-hidden="true">*</span></label><input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" minlength="2" maxlength="80" required /></div>
+            <div class="field-row two-cols"><div><label for="email">EMAIL ADDRESS <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" maxlength="160" required /></div><div><label for="phone">PHONE NUMBER <span aria-hidden="true">*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(555) 000-0000" maxlength="35" required /></div></div>
+            <div class="field-row"><label for="notes">ANYTHING WE SHOULD KNOW? <span class="optional">OPTIONAL</span></label><textarea id="notes" name="notes" rows="2" maxlength="400" placeholder="Tell us about your cut…"></textarea></div>
+            <div class="total-row"><span>ESTIMATED TOTAL</span><strong id="total-price">$—</strong></div>
+            <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+            <button type="submit" class="button button-submit" id="submit-button">CONFIRM APPOINTMENT <span>↗</span></button>
+            <p class="privacy-note">No payment required to book. Your details are used only to manage your appointment and send your confirmation.</p>
+            <p class="booking-policy"><strong>24-HOUR CANCELLATION POLICY</strong><br/>Please request cancellations or rescheduling at least 24 hours before your appointment. Message <a href="https://www.instagram.com/willxwiz/" target="_blank" rel="noopener noreferrer">@willxwiz on Instagram ↗</a> to request changes. Online self-service cancellations are not available yet.</p>
+          </form>
+        </aside>
+      </div>
+    </section>
+
+    <section class="steps-section" id="how"><div class="content-width">
+      <div class="section-intro compact"><div><p class="section-kicker">02 / THE PROCESS</p><h2>Simple looks <em>good</em> on you.</h2></div><p>Three steps. One fresh start.</p></div>
+      <div class="steps-grid">
+        <article class="step"><span class="step-no">01</span><div class="step-icon">✂</div><h3>Choose your cut</h3><p>From quick cleanups to a full refresh, find the service that fits your style.</p></article>
+        <article class="step"><span class="step-no">02</span><div class="step-icon">▦</div><h3>Pick your time</h3><p>See available appointments and reserve a spot that works for your day.</p></article>
+        <article class="step"><span class="step-no">03</span><div class="step-icon">✓</div><h3>Show up & shine</h3><p>You'll see a confirmation right away and get your details by email when enabled.</p></article>
+      </div>
+    </div></section>
+
+    <section class="visit-section content-width" id="hours"><div class="visit-title"><p class="section-kicker">03 / THE DETAILS</p><h2>See you<br/><em>in the chair.</em></h2><a href="#booking" class="button button-dark">BOOK YOUR VISIT <span>↗</span></a></div><div class="visit-hours"><span class="small-head">STUDIO HOURS</span><div id="hours-list" class="hours-list"><span>Loading available days…</span></div><p>All appointment times are shown in Pacific Time. Availability can vary by date.</p><a class="visit-instagram" href="https://www.instagram.com/willxwiz/" target="_blank" rel="noopener noreferrer">FOLLOW @WILLXWIZ ON INSTAGRAM ↗</a></div></section>
+  </main>
+
+  <footer><div class="content-width footer-inner"><a class="footer-brand" href="#top">WILLIAM'S<span>.</span></a><a class="footer-instagram" href="https://www.instagram.com/willxwiz/" target="_blank" rel="noopener noreferrer">INSTAGRAM @WILLXWIZ ↗</a><span>© <span id="year"></span> WILLIAM'S BARBER STUDIO</span></div></footer>
+
+  <div class="modal-backdrop" id="success-modal" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-check">✓</div><p class="section-kicker">ALL SET</p><h2 id="modal-title">You're on<br/><em>the books.</em></h2><p id="confirmation-copy"></p><div class="confirmation-details" id="confirmation-details"></div><p class="demo-warning" id="demo-warning"></p><button class="button button-dark" type="button" id="close-modal">DONE <span>↗</span></button></section>
+  </div>
+</body>
+</html>
